@@ -1429,6 +1429,11 @@
     .tab-pane:first-child .tab-pane__content {
         display: block;
     }
+    .footer__line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 }
 
 /* Small Devices, Tablets */
