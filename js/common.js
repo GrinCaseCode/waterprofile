@@ -3,21 +3,20 @@ $(document).ready(function() {
 
 
 
-//прилипающие меню
-var $menu = $(".header");
+var $sticky = $(".sticky-card");
 $(window).scroll(function(){
-  if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
-    $menu.removeClass("default").addClass("fixed");
-  } else if($(this).scrollTop() <= 0 && $menu.hasClass("fixed")) {
-    $menu.removeClass("fixed").addClass("default");
+  if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
+    $sticky.removeClass("default").addClass("fixed");
+  } else if($(this).scrollTop() <= 800 && $sticky.hasClass("fixed")) {
+    $sticky.removeClass("fixed").addClass("default");
   }
   
 });
 
-if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
-    $menu.removeClass("default").addClass("fixed");
-  } else if($(this).scrollTop() <= 0 && $menu.hasClass("fixed")) {
-    $menu.removeClass("fixed").addClass("default");
+if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
+    $sticky.removeClass("default").addClass("fixed");
+  } else if($(this).scrollTop() <= 800 && $sticky.hasClass("fixed")) {
+    $sticky.removeClass("fixed").addClass("default");
   }
 
 
@@ -60,8 +59,15 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 
 	$(".menu-overlay").click(function() {
 		$(".menu-mobile").removeClass("active");
+		$(".sidebar-catalog").removeClass("active");
 			$(".menu-overlay").fadeOut(200);
 	});
+
+	$('.btn-open-sidebar, .btn-mobile_filter').click(function(event) {
+		event.preventDefault();
+		$(".sidebar-catalog").addClass("active");
+		$(".menu-overlay").fadeIn(200);
+	  });
 
 	//слайдер
 
@@ -150,6 +156,87 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 			]
 		});
 
+		$('.slider-for').slick({
+			arrows: true,
+			dots: false,
+			infinite: false,
+			adaptiveHeight: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			asNavFor: '.slider-nav',
+			touchThreshold: 1000,
+			prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+		});
+	
+		$('.slider-nav').slick({
+			arrows: false,
+			dots: false,
+			infinite: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			touchThreshold: 1000,
+			focusOnSelect: true,
+			prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+
+		});
+
+		$('.slider-recommendations').slick({
+			arrows: true,
+			dots: true,
+			infinite: true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			touchThreshold: 1000,
+			focusOnSelect: true,
+			prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+					}
+				}
+				]
+			});
+
+		$('.views-catalog a').click(function(event) {
+			event.preventDefault();
+			$(this).addClass("active");
+			$(this).siblings().removeClass("active");
+		  });
+
+		$('.views-catalog_2').click(function() {
+			$(".row_catalog").children().removeClass("col-lg-3 col-lg-4");
+			$(".row_catalog").children().addClass("col-lg-6");
+		  });
+		  $('.views-catalog_3').click(function() {
+			$(".row_catalog").children().removeClass("col-lg-3 col-lg-6");
+			$(".row_catalog").children().addClass("col-lg-4");
+		  });
+
+		  $('.views-catalog_4').click(function() {
+			$(".row_catalog").children().removeClass("col-lg-4 col-lg-6");
+			$(".row_catalog").children().addClass("col-lg-3");
+		  });
+
+
+		$(".list-sidebar__arrow").click(function() {
+			$(this).parent().toggleClass("active");
+			$(this).siblings("ul").slideToggle(200);
+			$(this).parent().siblings("li").removeClass("active");
+			$(this).parent().siblings("li").find("ul").slideUp(200);
+		  });
+	
+		  $(".btn-page_filter").click(function(e) {
+			e.preventDefault();
+			$(this).toggleClass("active");
+			$(".sidebar-catalog").slideToggle(200);
+		});
+
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
 	$('.tabs li a').click(function(event) {
@@ -161,9 +248,55 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		$(selectTab).fadeIn(200);
 	  });
 
+	  $('.tab-pane__head').click(function(event) {
+		event.preventDefault();
+		$(".tab-pane__content").slideUp(200);
+		$(".tab-pane").removeClass("active");
+		$(this).siblings(".tab-pane__content").slideToggle(200);
+		$(this).parent().toggleClass("active");
+	  });
 
-	 // стайлер для select
-	 $('select').styler();
+	  $(".range-catalog").ionRangeSlider({
+        type: "double",
+        grid: true,
+        min: 103,
+        max: 223600,
+        from: 103,
+        to: 223600,
+        prefix: "₽"
+    });
+
+
+	jQuery('.quantity').each(function() {
+		var spinner = jQuery(this),
+		input = spinner.find('input[type="number"]'),
+		btnUp = spinner.find('.quantity-up'),
+		btnDown = spinner.find('.quantity-down'),
+		min = input.attr('min'),
+		max = input.attr('max');
+
+		btnUp.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue >= max) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue + 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+
+		btnDown.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue <= min) {
+				var newVal = oldValue;
+			} else {
+				var newVal = oldValue - 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		});
+	});
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
