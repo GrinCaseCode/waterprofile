@@ -1437,6 +1437,9 @@
     .footer {
         margin-bottom: 53px;
     }
+    .no-scroll {
+        overflow: hidden;
+    }
 }
 
 /* Small Devices, Tablets */
