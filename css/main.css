@@ -1626,6 +1626,7 @@ form {
 .irs--flat .irs-handle {
 	width: 1.1458333vw;
     height: 1.1458333vw;
+	top: 0.729vw;
 	box-shadow: 0 0.1041667vw 0.2604167vw #ccc;
 	background: #fff;
 	border-radius: 50%;
@@ -1641,10 +1642,27 @@ form {
 	background: rgb(16,167,249);
 }
 .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+	top: -0.208vw;
+	padding: 0.052vw 0.26vw;
+	border-radius: 0.208vw;
+	font-size: 0.521vw;
 	background: rgb(16,167,249);
 }
 .irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+	bottom: -0.26vw;
 	border-top-color: rgb(16,167,249);
+}
+.irs--flat .irs-bar {
+	top: 1.302vw;
+}
+.irs-grid {
+	height: 1.042vw;
+}
+.irs--flat.irs-with-grid {
+    height: 3.125vw;
+}
+.irs--flat .irs-line {
+    top: 1.302vw;
 }
 .irs--flat.irs-with-grid {
 	margin-top: 0.78125vw;

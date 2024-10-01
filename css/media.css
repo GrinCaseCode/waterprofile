@@ -859,7 +859,29 @@
     .irs--flat .irs-handle {
         width: 22px;
         height: 22px;
+        top: 14px;
         box-shadow: 0 2px 5px #ccc;
+    }
+    .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+        top: -4px;
+        padding: 1px 5px;
+        border-radius: 4px;
+        font-size: 10px;
+    }
+    .irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before  {
+        bottom: -5px;
+    }
+    .irs--flat .irs-bar {
+        top: 25px;
+    }
+    .irs-grid {
+        height: 20px;
+    }
+    .irs--flat.irs-with-grid {
+        height: 60px;
+    }
+    .irs--flat .irs-line {
+        top: 25px;
     }
     .irs--flat .irs-line,
     .irs--flat .irs-bar {
