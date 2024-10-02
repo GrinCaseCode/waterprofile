@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
 
-
-
 var $sticky = $(".sticky-card");
 $(window).scroll(function(){
   if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
@@ -19,6 +17,15 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
     $sticky.removeClass("fixed").addClass("default");
   }
 
+
+  $(document).on('mousemove', function(e) {
+	$('.modal-icons i').each(function() {
+		var offsetX = (e.pageX / $(window).width() - 0.5) * 20;
+		var offsetY = (e.pageY / $(window).height() - 0.5) * 20;
+
+		$(this).css('transform', 'translate(' + offsetX + 'px, ' + offsetY + 'px)');
+	});
+});
 
   $('.menu-list__open').click(function(event) {
 	event.preventDefault();
