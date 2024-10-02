@@ -2293,15 +2293,7 @@ input[type=number] {
     visibility: visible;
     opacity: 1;
 }
-.nav-card__button .tooltip-main:before {
-	top: 100%;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-    border-width: 0.26vw 0.26vw 0.26vw 0.26vw;
-	border-left-color: transparent;
-    border-top-color: #000;
-}
+
 .item-nav-dropdown {
 	width: 12.5vw;
 	font-size: 0.73vw;

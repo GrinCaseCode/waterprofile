@@ -209,6 +209,7 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
 					breakpoint: 992,
 					settings: {
 						slidesToShow: 2,
+						arrows: false,
 					}
 				}
 				]
@@ -261,8 +262,8 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
 
 	  $('.tab-pane__head').click(function(event) {
 		event.preventDefault();
-		$(".tab-pane__content").slideUp(200);
-		$(".tab-pane").removeClass("active");
+		$(this).parent().siblings().find(".tab-pane__content").slideUp(200);
+		$(this).parent().siblings(".tab-pane").removeClass("active");
 		$(this).siblings(".tab-pane__content").slideToggle(200);
 		$(this).parent().toggleClass("active");
 	  });
