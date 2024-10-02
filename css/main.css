@@ -2236,7 +2236,7 @@ input[type=number] {
 	border: 0.052vw solid rgba(0,0,0,.105);
 }
 .slider-recommendations .slick-list {
-	padding: 0 0.1vw;
+	border: 0.052vw solid rgba(0, 0, 0, .105);
 }
 .slider-recommendations .item-catalog__image {
 	height: 10.42vw;
