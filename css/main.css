@@ -3188,6 +3188,7 @@ input[type=number] {
     transform: translateY(0.521vw);
     border-color: rgb(16,167,249);
     opacity: 0;
+	display: inline-block;
 }
 .item-payment:hover .link-page {
     transform: none;
