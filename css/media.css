@@ -1702,8 +1702,8 @@
         height: 50px;
     }
     .etaps__bottom {
+        bottom: -3px;
         transform: rotate(180deg);
-
     }
     .etaps__bottom svg {
         transform: translateX(-50%) rotateY(0);
@@ -1955,6 +1955,9 @@
     }
     .page-portfolio .item-portfolio {
         height: 300px;
+    }
+    .etaps__image {
+        transform: none !important;
     }
 }
 
