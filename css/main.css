@@ -3223,3 +3223,319 @@ input[type=number] {
 	transform: scale(1);
 	opacity: 1;
 }
+
+.page-contacts {
+	padding: 2.083vw 0;
+}
+.image-contacts {
+	margin-right: 1.042vw;
+	display: block;
+}
+.image-contacts img {
+	width: 100%;
+	height: auto;
+}
+.item-contact {
+	gap: 0.781vw;
+	margin-bottom: 1.042vw;
+	color: #333;
+	display: flex;
+	align-items: flex-start;
+}
+.item-contact__icon {
+	width: 2.604vw;
+	height: 2.604vw;
+	font-size: 2.604vw;
+	color: #10A7F9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+}
+.item-contact__title {
+	font-size: 1.042vw;
+	margin-bottom: 0.417vw;
+    font-weight: 700;
+	color: #000;
+}
+.item-contact__content a {
+	color: #333;
+}
+.item-contact__requisites {
+	font-size: 0.729vw;
+	color: #777;
+}
+.page-contacts .title-form {
+	margin-top: 1.823vw;
+}
+.item-contact_vk {
+	margin-top: 1.823vw;
+	justify-content: center;
+}
+.map-contacts {
+	margin-top: 2.083vw;
+}
+
+.page-news {
+    padding-top: 2.083333vw;
+    padding-bottom: 3.645833vw;
+}
+.item-news {
+    min-height: 100%;
+    box-shadow: 0 0 0.208333vw rgba(0, 0, 0, .12);
+    transition: all 0.7s;
+    position: relative;
+    text-align: center;
+}
+.item-news:hover {
+    box-shadow: 0 0 0.46875vw rgba(0, 0, 0, .2);
+}
+.item-news__image {
+    height: 17.708333vw;
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.item-news__image::after {
+    position: absolute;
+    display: block;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: all 1s;
+    opacity: 0;
+}
+.item-news__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    transition: all 2s;
+}
+.item-news:hover .item-news__image::after {
+    opacity: 1;
+}
+.item-news:hover .item-news__image img {
+    transform: scale(1.08);
+}
+.item-news__data {
+    font-size: 0.625vw;
+    padding-top: 0.3125vw;
+    padding-bottom: 0.416667vw;
+    top: 0.520833vw;
+    left: 0.520833vw;
+    min-width: 2.760417vw;
+    box-shadow: 0 0 0.46875vw rgba(0, 0, 0, .1);
+    line-height: 1;
+    color: #333;
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 2;
+    text-align: center;
+    position: absolute;
+}
+.item-news__data span {
+    font-size: 1.25vw;
+    margin-bottom: 0.3125vw;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+}
+.item-news__content {
+    padding: 1.302083vw;
+    position: relative;
+}
+.item-news__title {
+    font-size: 1.25vw;
+    margin-bottom: 0.520833vw;
+    line-height: 1.4;
+    color: #333;
+    display: block;
+    width: 100%;
+}
+.item-news__meta {
+    font-size: 0.729167vw;
+    gap: 0.260417vw;
+    margin-bottom: 0.520833vw;
+    line-height: 1.4;
+    color: #a5a5a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.item-news__author {
+    color: #a5a5a5;
+}
+.item-news__avatar {
+    width: 0.9375vw;
+    height: 0.9375vw;
+    display: block;
+    flex: none;
+    border-radius: 50%;
+}
+.item-news__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    border-radius: 50%;
+}
+.item-news__comments {
+    width: 1.041667vw;
+    height: 1.041667vw;
+    font-size: 0.833333vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-news__comments:after {
+    content: "\f103";
+    font-family: "woodmart-font";
+}
+.item-news__comments span {
+    position: absolute;
+    top: -0.208333vw;
+    right: -0.208333vw;
+    width: 0.729167vw;
+    height: 0.729167vw;
+    border-radius: 50%;
+    background-color: #bbb;
+    color: #FFF;
+    text-align: center;
+    font-size: 0.46875vw;
+    line-height: 0.729167vw;
+}
+.item-news__link {
+    padding-top: 1.041667vw;
+}
+.item-news__link a {
+    font-size: 0.677083vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(16,167,249);
+    position: relative;
+}
+.item-news__category {
+    top: -0.677083vw;
+    left: 0;
+    width: 100%;
+    position: absolute;
+}
+.item-news__category a {
+    font-size: 0.625vw;
+    padding: 0 0.520833vw;
+    height: 1.302083vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    background: rgb(16,167,249);
+}
+.item-news__dots {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.260417vw;
+    margin-left: -1.145833vw;
+    text-align: center;
+    font-size: 0;
+    z-index: 2;
+}
+.item-news__dots:after,
+.item-news__dots:before {
+    content: ""
+}
+.item-news__dots span,
+.item-news__dots:after,
+.item-news__dots:before {
+    display: inline-block;
+    margin-right: 0.364583vw;
+    width: 0.520833vw;
+    height: 0.520833vw;
+    border-radius: 50%;
+    background-color: #FFF;
+    vertical-align: middle;
+    opacity: 0;
+    transition: opacity .2s ease;
+    animation: wd-fadeOutRight .3s ease
+}
+.item-news__dots:after {
+    margin-right: 0
+}
+.item-news__dots span {
+    transition-delay: .1s;
+    animation-delay: .1s
+}
+.item-news__dots:before {
+    transition-delay: .15s;
+    animation-delay: .15s
+}
+@keyframes wd-fadeOutRight {
+    from {
+        transform: none
+    }
+    to {
+        transform: translate3d(2.604167vw,0,0)
+    }
+}
+@keyframes wd-fadeInLeft {
+    from {
+        transform: translate3d(-2.604167vw,0,0)
+    }
+    to {
+        transform: none
+    }
+}
+.item-news:hover .item-news__dots span,
+.item-news:hover .item-news__dots:after,
+.item-news:hover .item-news__dots:before {
+    opacity: 1;
+    animation: wd-fadeInLeft .3s ease
+}
+.item-news:hover .item-news__dots:before {
+    transition-delay: .2s;
+    animation-delay: .2s
+}
+.item-news:hover .item-news__dots span {
+    transition-delay: .1s;
+    animation-delay: .1s
+}
+.item-news__link a:after {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    display: inline-block;
+    margin-left: 0.260417vw;
+    height: 0.260417vw;
+    font-weight: 600;
+    font-size: 0.729167vw;
+    line-height: 0.260417vw;
+    opacity: 0;
+    transition: opacity .35s ease;
+    content: "\f109";
+    font-family: "woodmart-font";
+}
+.item-news__link a:hover:after {
+    opacity: 1;
+    animation: wd-ShakeNext 1s ease infinite;
+}
+@keyframes wd-ShakeNext {
+    25% {
+        transform: translate3d(0,0,0)
+    }
+    50% {
+        transform: translate3d(-0.15625vw,0,0)
+    }
+    75% {
+        transform: translate3d(0.15625vw,0,0)
+    }
+}
