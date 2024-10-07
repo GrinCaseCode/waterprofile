@@ -56,7 +56,9 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
   });
 
 	//плавный скролл
-	$(".navigat li a").mPageScroll2id();
+	$(".anchors-article a").mPageScroll2id({
+		offset: 20
+	});
 
 
 	//кнопка sandwich
@@ -264,6 +266,29 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
 						]
 					});			
 
+					$('.slider-catalog-small').slick({
+						arrows: true,
+						dots: true,
+						infinite: true,
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						touchThreshold: 1000,
+						speed: 3000,
+						focusOnSelect: true,
+						prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+						nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+						responsive: [
+							{
+								breakpoint: 992,
+								settings: {
+									slidesToShow: 2,
+									slidesToScroll: 2,
+									arrows: false,
+								}
+							}
+							]
+						});
+
 		$('.views-catalog a').click(function(event) {
 			event.preventDefault();
 			$(this).addClass("active");
@@ -360,6 +385,26 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
 			spinner.find("input").trigger("change");
 		});
 	});
+
+	{
+		if ($(window).width() < 992) { 
+		  $(".btn-hotspot").click(function() {
+			if ($(".hotspot-wrap .item-catalog").is(":hidden")) {
+				$(".hotspot-wrap .item-catalog").fadeIn(200);
+			} else {
+				$(".hotspot-wrap .item-catalog").fadeOut(200);
+			}
+		  });
+		  $(document).mouseup(function (e) {
+			var container = $(".hotspot-wrap .item-catalog");
+			if (container.has(e.target).length === 0){
+				$(".hotspot-wrap .item-catalog").fadeOut(200);
+			}
+		  });
+		  
+	
+		}
+	  }
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
