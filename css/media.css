@@ -2499,6 +2499,111 @@
         border-left-color: transparent;
         border-top-color: #000;
     }
+
+
+    .modal-quick {
+        width: 500px;
+        padding: 15px;
+    }
+    .modal-quick .item-form {
+        margin-bottom: 10px;
+    }
+    .modal-quick .item-form input {
+        height: 33px;
+        font-size: 14px;
+        border-radius: 2px;
+        border-width: 1px;
+    }
+    .modal-quick .item-form textarea {
+        height: 160px;
+        font-size: 14px;
+        border-radius: 2px;
+        border-width: 1px;
+        padding: 5px;
+    }
+    .modal-quick__title {
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+    .table-quick {
+        margin-bottom: 15px;
+    }
+    .table-quick table th,
+    .table-quick table td {
+        font-size: 12px;
+        line-height: 1.3;
+        padding: 5px;
+    }
+    .image-td {
+        width: 70px;
+        height: 70px;
+    }
+    .item-form__descr {
+        line-height: 12px;
+        font-size: 12px;
+        margin-top: 2px;
+    }
+    .checkbox-main {
+        margin-bottom: 20px;
+    }
+    .quick-quantity__title {
+        margin-bottom: 5px;
+    }
+    .quick-quantity input {
+        width: 75px;
+        height: 22px;
+        border-top: 2px solid rgba(0,0,0,.1);
+        border-bottom: 2px solid rgba(0,0,0,.1);
+    }
+    .quick-button {
+        padding-top: 18px;
+        padding-bottom: 10px;
+    }
+    .quick-button .btn-main {
+        height: 44px;
+        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        min-width: 150px;
+        font-size: 13px;
+    }
+
+
+    .modal-view {
+        width: 920px;
+    }
+    .content-view {
+        padding-top: 0;
+        margin-top: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 40px;
+        max-height: 305px;
+    }
+    .col-slider-view .btn-main {
+        padding: 0 10px;
+        left: 15px;
+        right: 15px;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+    .content-view .title-card {
+        font-size: 26px;
+    }
+    .col-view {
+        -webkit-mask-image: linear-gradient(to top, transparent 5px, #000 40px);
+        mask-image: linear-gradient(to top, transparent 5px, #000 40px);
+    }
+    .modal-view + .fancybox-close-small {
+        padding: 6px;
+        right: 10px;
+        top: 4px;
+    }
+    .slider-view .slick-arrow {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
 }
 
 /* Small Devices, Tablets */

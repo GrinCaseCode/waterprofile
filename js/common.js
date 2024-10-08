@@ -288,6 +288,18 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
 							}
 							]
 						});
+						$('.slider-view').slick({
+							arrows: true,
+							dots: false,
+							infinite: false,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							touchThreshold: 1000,
+							focusOnSelect: true,
+							prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+							nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+							
+							});
 
 		$('.views-catalog a').click(function(event) {
 			event.preventDefault();
@@ -413,6 +425,12 @@ if ( $(this).scrollTop() > 800 && $sticky.hasClass("default") ){
 	$(".fancybox").fancybox({
 		autoFocus: false,
 		backFocus: false,
+		beforeShow : function(){
+			setTimeout(function () {
+			  $('.slider-view').slick('setPosition');
+			}, 30); 
+			
+		  }
 	});
 
 
